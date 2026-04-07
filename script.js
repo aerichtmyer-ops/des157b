@@ -5,12 +5,13 @@
     const body = document.querySelector('body');
     const banner = document.querySelector('#banner');
     const sections = document.querySelectorAll('section')
-    const background = document.querySelector('#background')
+    const background = document.querySelector('#container')
     const header = document.querySelector('#title1');
     const header2 = document.querySelector('#title2');
     const navs = document.querySelectorAll('nav');
     const header3 = document.querySelectorAll('h3');
     const main = document.querySelector('main');
+    const footer = document.querySelector('footer');
 
     let mode = 'dark';
 
@@ -35,6 +36,7 @@
             header.className = 'switch';
             header2.className = 'switch';
             main.className = 'switch';
+            footer.className = 'switch';
             
            
             for (const section of sections) {
@@ -66,6 +68,7 @@
             header.removeAttribute('class');
             header2.removeAttribute('class');
             main.removeAttribute('class');
+            footer.removeAttribute('class');
             for (const section of sections) {
                 section.removeAttribute('class');
             }

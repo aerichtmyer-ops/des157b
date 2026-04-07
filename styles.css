@@ -1,74 +1,12 @@
 
-.sansita-swashed {
-  font-family: "Sansita Swashed", system-ui;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.ibm-plex-sans {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-
-}
-
-.calistoga-regular {
-  font-family: "Calistoga", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.amatic-sc-regular {
-  font-family: "Amatic SC", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.amatic-sc-bold {
-  font-family: "Amatic SC", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.open-sans {
-  font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-}
-
-.lato-light {
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.lato-regular {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-
-.montserrat{
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-}
-
-#background {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(images/IMG_8606.jpeg);
+#container{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(images/beach.jpeg);
     
     background-size:cover;
     min-height: 100vh;
 }
 
-#background.switch{
+#container.switch{
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(images/desert.jpg);
     background-size:cover;
     min-height: 100vh;
@@ -154,7 +92,7 @@ main a{
 }
 
 main.switch a{
-    font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
@@ -193,22 +131,23 @@ nav.switch{
 }
 
 #banner {
+    display:flex;
     position: relative;
-    display: flex;
+
     width: 1100px;
     height: 150px;
     margin: auto;
-   
-    color: #333;
-    overflow: hidden;
-    display: grid;
-	  place-items: center;
-   
+    overflow: visible;
+
+   /*Referenced this animation online and was able to understand the code, credit Adam Abundis, link:https://www.sliderrevolution.com/resources/css-animated-background/*/
     animation: scroll 100s linear infinite;
-    background:url("images/IMG_5993.jpeg"), repeat scroll 0 0;
+    background:url("images/ocean2.jpg"), repeat scroll 0 0;
+    perspective-origin: 50% 50%;
+
     background-size:cover;
     color: #eee;
-    perspective-origin: 50% 50%;
+
+    
 }
 
 @keyframes scroll{
@@ -218,7 +157,7 @@ nav.switch{
 }
 
 #banner.switch {
-    background: url("images/purple.svg"), repeat scroll 0 0;
+    background: url("images/desert4.jpg"), repeat scroll 0 0;
     background-size:cover;
     animation: scroll 300s linear infinite;
     transition: all 2s;
@@ -241,8 +180,30 @@ main a:hover::before {
   transform: scaleX(1);
   transform-origin: left;
 }
+
 main a:hover{
     color:#90f6d2;
+}
+
+nav.switch a::before{
+  background: hsl(278, 73%, 19%);
+  content: "";
+  inset: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+  z-index: -1;
+}
+
+nav.switch a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+
+nav.switch a:hover{
+  color:#cdc1f6;
 }
 
 ul{
@@ -271,44 +232,129 @@ main section{
 }
 
 button{
-    position:absolute;
-    top: 95px;
+    /* position:absolute;
+    top: 50%;
     right: 20px;
-    padding: 6px;
-    box-shadow: 2px 2px 0 0 #000;
-    background-color:#40e9d2;
-    color: rgb(27, 3, 53);
-    font-family: "IBM Plex Sans", sans-serif;
+    transform: translateY(-50%); */
+    position: relative;
+    top: 20%;
+    left:360px;
+    margin-top: 55px;
+    margin-bottom: 55px;
+    
 
-    font-weight: 500;
+    padding: 8px;
+    border-radius: 12px;
+    background: #00A390;
+
+    box-shadow: 4px 7px 0.9px -2px rgba(3, 90, 167, 0.91);
+    border: none;
+    color: #FFF;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
     font-style: normal;
-    font-size: 16px;
+    font-size: 24px;
+    z-index: 10;
 }
 
 button:hover {
-    background-color: rgb(102, 45, 162);
+   font-family: "Cabin Sketch", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+    font-size: 24px;
+    background-color: #722CCF;
+    box-shadow: 4px 7px 0.9px -2px rgba(72, 9, 140, 0.91);
     cursor: pointer;
     color:#dbe9f8;
 }
 
 button.switch{
-    top: 95px;
+    /* position:absolute;
+    top: 50%;
     right: 20px;
-    padding: 6px;
+    transform: translateY(-50%); */
+    position: relative;
+    top: 20%;
+    left:360px;
+    margin-top: 55px;
+    margin-bottom: 55px;
+    
+    padding: 8px;
     box-shadow: 2px 2px 0 0 #000;
-    background-color:rgb(119, 28, 215);
-    color: #dbe9f8;
-    font-family: "Lato", sans-serif;
+    border-radius: 12px;
+    z-index: 10;
+
+    font-family: "Cabin Sketch", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 16px;
+    font-size: 24px;
+    color:#dbe9f8;
+    background-color: #722CCF;
+    box-shadow: 4px 7px 0.9px -2px rgba(72, 9, 140, 0.91);
 }
 
 button.switch:hover{
-    background-color: #40e9d2;
+    background: #00A390;
+    box-shadow: 4px 7px 0.9px -2px rgba(3, 90, 167, 0.91);
+    color: #FFF;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
     cursor: pointer;
-    color:rgb(27, 3, 53);
 }
+
+footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  background-color:#00344e;
+  min-height: 35px;
+}
+
+footer a{
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color:#c1e0f6;
+  text-decoration: none;
+}
+
+footer a:hover{
+  text-decoration: underline;
+}
+
+footer.switch{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  background-color:#2d0950;
+  min-height: 35px;
+}
+
+footer.switch a{
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color:#e0c1f6;
+  text-decoration: none;
+}
+
+footer.switch a:hover{
+  text-decoration: underline;
+}
+
+main{
+  margin-bottom: 0px;
+  padding-bottom: 15px;
+}
+
 
 @media screen and (min-width: 600px) {
     header {
@@ -354,8 +400,8 @@ button.switch:hover{
         justify-content: space-evenly;
         align-items: flex-start;
         margin: 1em auto;
+        padding-bottom: 0px;
     }
-
 
     main section {
         margin: 0 .25em;
@@ -400,15 +446,26 @@ button.switch:hover{
         margin-top: 0px;
     }
 
- 
     button{
-        top: 245px;
-        right: 90px;
+      top: 30%;
+      left:85%;
+      margin-top: 80px;
+      margin-bottom: 80px;
     }
 
     button.switch{
-      top: 235px;
-      right: 75px;
+       top: 30%;
+      left:85%;
+      margin-top: 80px;
+      margin-bottom: 80px;
+    }
+
+    footer{
+      margin-top: -35px;
+    }
+
+    footer.switch{
+      margin-top:-35px;
     }
 }
 
