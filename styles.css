@@ -21,7 +21,7 @@ header {
 
 header h1{
   font-family: "Sansita Swashed", system-ui;
-  font-optical-sizing: auto;
+
   font-weight: 500;
   font-style: normal;
   font-size: 42px;
@@ -32,7 +32,6 @@ header h1{
 
 header h2{
   font-family: "IBM Plex Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
   font-size: 18px;
@@ -54,7 +53,6 @@ header h2{
 
 #title2.switch{
   font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
   font-size: 20px;
@@ -71,7 +69,6 @@ main h3{
 
 h3.switch{
   font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
   font-size: 22px;
@@ -81,7 +78,6 @@ h3.switch{
 
 main a{
   font-family: "IBM Plex Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   font-size: 18px;
@@ -93,7 +89,6 @@ main a{
 
 main.switch a{
   font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
   font-size: 18px;
@@ -208,7 +203,7 @@ nav.switch a:hover{
 
 ul{
 
-    list-style:circle #e4e287;
+    color: #e4e287;
     list-style-position: outside;
     padding-left: 0px;
  
