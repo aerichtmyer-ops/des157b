@@ -157,7 +157,7 @@ nav.switch{
 }
 
 #banner.switch {
-    background: url("images/desert4.jpg"), repeat scroll 0 0;
+    background: url("images/desert5.jpg"), repeat scroll 0 0;
     background-size:cover;
     animation: scroll 300s linear infinite;
     transition: all 2s;
