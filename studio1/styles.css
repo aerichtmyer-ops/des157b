@@ -1,0 +1,57 @@
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+#myVideo{
+            position:fixed;
+            right:0;
+            bottom:0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: 0;
+            filter: grayscale(80%) contrast(70%) hue-rotate(90deg);
+        }
+
+        .fa-solid{
+            position: absolute;
+            top:10px;
+            right:10px;
+            color:blueviolet;
+            z-index: 1;
+            font-size: 36px;
+        }
+
+        .fa-solid:hover{
+            cursor: pointer;
+        }
+
+        #title{
+            position: absolute;
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 92px;
+            color: aliceblue;
+        } 
+
+        #line1.hidden{
+            /* opacity: 0; */
+        } 
+
+        #line1.showing{
+            /* opacity: 1; */
+        }
+   
+
+        #line1{
+            margin-left: 20%;
+            margin-top: 8%;
+            
+           
+        }
+
+      
