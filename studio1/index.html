@@ -29,16 +29,25 @@
 
 
     <i class="fa-solid fa-maximize"></i>
-    <video id = "myVideo" poster = "images/poster.jpg" alt="pic of mimi" loop autoplay muted playsinline>
+    <video id = "myVideo" poster = "images/poster.jpg" loop autoplay muted playsinline>
 
         <source src ="media/mimi.mp4" type = "video/mp4">
 
+        <p>Your browser doesn't support HTMl5 video.</p>
+
     </video>
 
-    <section id = "title"> 
-            <p  id = "line1" class="hidden">Your dog is...</p>
+    <div id = "loading">
+        <p>Loading...</p>
+    </div>
 
+    <section id = "title"> 
+            <p id = "line1" class="hidden">While a dog is only a part of your life,</p>
+            <p id = "line2" class = "hidden">you are their entire world.</p> 
     </section>
     
+    <section id = 'bark'>
+            <p id = 'click'> (Click anywhere for Bark)</p>
+    </section>
 </body>
 </html>
