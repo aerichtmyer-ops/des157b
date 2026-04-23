@@ -1,0 +1,85 @@
+.young-serif-regular {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.eb-garamond{
+  font-family: "EB Garamond", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+.sen {
+  font-family: "Sen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body{
+    background-color: antiquewhite;
+    
+    z-index: -1;
+}
+
+header{
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: -25px;
+  margin-top: 0px;
+
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: -1;
+    margin-top: 0px;
+
+}
+
+.case{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    margin: auto 0;
+   
+    margin-top: -150px;
+}
+
+.worm{
+    position: absolute;
+    z-index: 2;
+    bottom: 184px;
+    left: 245px;
+}
+
+.worm:hover{
+    animation: wiggle 0.5s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0% {
+      rotate: 0deg;
+      translate: 0 0
+  }
+
+  25% {
+      rotate: -2deg;
+      translate: -5px 0
+  }
+
+  80% {
+      rotate: 2deg;
+      translate: 5px 0
+  }
+}

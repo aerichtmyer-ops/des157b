@@ -100,6 +100,7 @@ line2.showing{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: opacity 0.5s ease;
 }
 
 #loading p{
