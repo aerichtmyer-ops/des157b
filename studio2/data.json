@@ -1,0 +1,112 @@
+{
+  "books": [
+    {
+      "book_number": 1,
+      "title": "The Knight and the Moth",
+      "author": "Rachel Gillig",
+      "date": "April 2",
+      "pages_read": 123,
+      "time_reading": { "value": 150, "unit": "minutes" },
+      "enjoyment": 7
+    },
+    {
+      "book_number": 2,
+      "title": "Julia Morgan",
+      "author": "Mark Anthony Wilson",
+      "date": "April 5",
+      "pages_read": 72,
+      "time_reading": { "value": 90, "unit": "minutes" },
+      "enjoyment": 7.5
+    },
+    {
+      "book_number": 3,
+      "title": "The Swallows of Kabul",
+      "author": "Yasmina Khadra",
+      "date": "April 7",
+      "pages_read": 172,
+      "time_reading": { "value": 210, "unit": "minutes" },
+      "enjoyment": 6
+    },
+    {
+      "book_number": 4,
+      "title": "Creative Illustration",
+      "author": "Andrew Loomis",
+      "date": "April 10",
+      "pages_read": 45,
+      "time_reading": { "value": 60, "unit": "minutes" },
+      "enjoyment": 8
+    },
+    {
+      "book_number": 5,
+      "title": "Anna Karenina",
+      "author": "Leo Tolstoy",
+      "date": "April 13",
+      "pages_read": 5,
+      "time_reading": { "value": 15, "unit": "minutes" },
+      "enjoyment": 5
+    },
+    {
+      "book_number": 6,
+      "title": "Mucha",
+      "author": "Arthur Eldridge",
+      "date": "April 14",
+      "pages_read": 36,
+      "time_reading": { "value": 45, "unit": "minutes" },
+      "enjoyment": 7.5
+    },
+    {
+      "book_number": 7,
+      "title": "Wuthering Heights",
+      "author": "Emily Bronte",
+      "date": "April 17",
+      "pages_read": 5,
+      "time_reading": { "value": 10, "unit": "minutes" },
+      "enjoyment": 3
+    },
+    {
+      "book_number": 8,
+      "title": "The City of Brass",
+      "author": "S. A. Chakraborty",
+      "date": "April 19",
+      "pages_read": 1,
+      "time_reading": { "value": 2, "unit": "minutes" },
+      "enjoyment": 5
+    },
+    {
+      "book_number": 9,
+      "title": "Caraval",
+      "author": "Stephanie Garber",
+      "date": "April 20",
+      "pages_read": 10,
+      "time_reading": { "value": 25, "unit": "minutes" },
+      "enjoyment": 7
+    },
+    {
+      "book_number": 10,
+      "title": "Caraval",
+      "author": "Stephanie Garber",
+      "date": "April 20",
+      "pages_read": 10,
+      "time_reading": { "value": 25, "unit": "minutes" },
+      "enjoyment": 7
+    },
+    {
+      "book_number": 11,
+      "title": "One Dark Window",
+      "author": "Rachel Gillig",
+      "date": "April 24",
+      "pages_read": 14,
+      "time_reading": { "value": 35, "unit": "minutes" },
+      "enjoyment": 6
+    },
+    {
+      "book_number": 12,
+      "title": "Catcher in the Rye",
+      "author": "J. D. Salinger",
+      "date": "April 27",
+      "pages_read": 37,
+      "time_reading": { "value": 55, "unit": "minutes" },
+      "enjoyment": 8
+    }
+  ]
+}

@@ -83,8 +83,8 @@ header h1{
 .worm{
     position:absolute;
     z-index: 0;
-    bottom: 150px;
-    left: 223px;
+    bottom: 153px;
+    left: 244px;
     
 }
 
@@ -107,4 +107,114 @@ header h1{
       rotate: 2deg;
       translate: 5px 0;
   }
+}
+
+main .book1{
+    position:absolute;
+    z-index: 0;
+    top: 160px;
+    left: 544px;
+}
+
+main .book1:hover, .book2:hover, .book3:hover, .book4:hover, .book5:hover, .book5:hover, .book6:hover, .book7:hover, .book8:hover, .book9:hover, .book10:hover, .book11:hover, .book12:hover{
+    transform: scale(1.05);
+    filter: drop-shadow(-4px 3px 1.6px rgba(0, 0, 0, 0.29));
+}
+
+main .book2{
+    position:absolute;
+    z-index: 0;
+    top: 164px;
+    left: 602px;
+}
+
+main .book3{
+    position:absolute;
+    z-index: 0;
+    top: 164px;
+    left: 645px;
+}
+
+main .book4{
+    position:absolute;
+    z-index: 0;
+    top: 164px;
+    left: 700px;
+}
+
+main .book5{
+    position:absolute;
+    z-index: 0;
+    top: 170px;
+    left: 735px;
+}
+
+main .book6{
+    position:absolute;
+    z-index: 0;
+    top: 170px;
+    left: 935px;
+}
+
+main .book7{
+    position:absolute;
+    z-index: 0;
+    top: 180px;
+    left: 997px;
+}
+
+main .book8{
+    position:absolute;
+    z-index: 0;
+    bottom: 60px;
+    left: 450px;
+}
+
+main .book9{
+    position:absolute;
+    z-index: 0;
+    bottom: 60px;
+    left: 539px;
+}
+
+main .book10{
+    position:absolute;
+    z-index: 0;
+    bottom: 60px;
+    left: 576px;
+}
+
+main .book11{
+    position:absolute;
+    z-index: 0;
+    bottom: 60px;
+    left: 616px;
+}
+
+main .book12{
+    position:absolute;
+    z-index: 0;
+    bottom: 60px;
+    left: 848px;
+}
+
+#displaydata{
+    border-radius: 12px;
+    background: rgb(252, 207, 143);
+    box-shadow: 0 3px 5.2px 1px #ac7300;
+
+    padding: 2rem;
+    
+    /* margin-top: 295px; */
+
+
+    max-width: 600px;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left: 250px;
+}
+
+.hidden{
+  display:none;
 }
