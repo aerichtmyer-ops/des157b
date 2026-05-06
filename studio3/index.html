@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Liberty</title>
+
+    <!-- Normalize CSS for browser compatability -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!-- Add link to any google fonts used here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&family=Cactus+Classical+Serif&family=Fleur+De+Leah&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- My Styles -->
+    <link href="styles.css" rel="stylesheet">
+
+    <!--AOS CSS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
+    <!-- Meta tag for mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- D3 -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://raw.githubusercontent.com/codeforamerica/click_that_hood/master/public/data/california-counties.geojson"></script>
+   
+    <!-- My script -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>My Plant Diary</h1>
+        
+        <div class = "start">
+            <p class = "scroll">Scroll Down</p>
+            <i class="fa-solid fa-angle-down"></i>
+        </div>
+    </header>
+
+    <main>
+        
+        <div id = "plant1">
+           
+            <div data-aos="fade-right">
+                <img src = "images/coulter.jpg" height="350" width ="352" alt ="Coulter's Matilija Poppy" class = "coulterimg">
+            </div>
+            <div id ="chart1" data-aos="fade-up-left"></div>
+            <div data-aos="fade-up" data-aos-anchor-placement="center-bottom"  class="data1">
+                <p>Name: Coulter's Matilija Poppy</p>
+                <p>Date Found: 2/22/26</p>
+                <p>Location: Davis, CA</p>
+            </div>
+       
+        </div>
+
+        <div id = "plant2">
+            <div data-aos="fade-right">
+                <img src = "images/tulip.jpg" height="350" width ="352" alt ="Tulipa 'Flaming Flag'" class = "coulterimg">
+            </div>
+            <div id ="chart2" data-aos="fade-up-left"></div>
+            <div data-aos="fade-up" data-aos-anchor-placement="center-bottom"  class="data1">
+                <p>Name: Tulipa 'Flaming Flag'</p>
+                <p>Date Found: 3/25/26</p>
+                <p>Location: San Francisco, CA</p>
+            </div>
+        </div>
+
+        <div id = "plant3">
+            <div data-aos="fade-right">
+                <img src = "images/callalily.jpg" height="350" width ="352" alt ="Calla Lilly" class = "coulterimg">
+            </div>
+            
+            <div id ="chart3" data-aos="fade-up-left"></div>
+           
+            <div data-aos="fade-up" data-aos-anchor-placement="center-bottom"  class="data1">
+                <p>Name: Calla Lily</p>
+                <p>Date Found: 1/14/26</p>
+                <p>Location: Napa, CA</p>
+            </div>
+        </div>
+    
+    </main>
+    
+    <footer>
+        <a href = "https://github.com/michalsnik/aos/blob/next/README.md">AOS</a>
+        <a href = "https://github.com/d3/d3/blob/main/README.md">D3</a>
+    </footer>
+
+  <!-- <script>
+    AOS.init();
+  </script> -->
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "des157b",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aerichtmyer-ops/des157b.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/aerichtmyer-ops/des157b/issues"
+  },
+  "homepage": "https://github.com/aerichtmyer-ops/des157b#readme",
+  "dependencies": {
+    "@observablehq/runtime": "^6.0.0",
+    "d3": "^7.9.0"
+  }
+}
