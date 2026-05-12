@@ -34,7 +34,29 @@ p{
 }
 
 div{
-    margin-left: 250px;
-    margin-right: 250px;
     text-align: justify;
+}
+
+main{
+  max-width: 650px;
+  margin:auto;
+}
+
+a {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color: #f6f4fd;
+  text-decoration: none;
+}
+
+.portal{
+  margin: 30px;
+}
+
+.portal:hover{
+  text-decoration: underline;
+   color: #f6f4fd;
 }
