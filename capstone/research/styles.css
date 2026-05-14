@@ -35,6 +35,7 @@ p{
 
 div{
   text-align: justify;
+  margin-bottom: 60px;
 }
 
 main{
@@ -49,14 +50,54 @@ a {
   font-style: normal;
   font-size: 16px;
   color: #f6f4fd;
-  text-decoration: none;
 }
 
-.portal{
+a:hover{
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color: #f6f4fd;
+}
+
+.portal {
   margin: 30px;
+}
+
+.portal a {
+  text-decoration: none;
 }
 
 .portal:hover{
   text-decoration: underline;
    color: #f6f4fd;
+}
+
+.missing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.missing a:hover{
+  color:#C4FF4D;
+}
+
+.universe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.universe a:hover{
+      color:#C4FF4D;
 }
