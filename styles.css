@@ -397,6 +397,8 @@ main{
         align-items: flex-start;
         margin: 1em auto;
         padding-bottom: 0px;
+        margin-top: 30px;
+        max-width: 1250px;
     }
 
     main section {
