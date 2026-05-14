@@ -101,3 +101,17 @@ a:hover{
 .universe a:hover{
       color:#C4FF4D;
 }
+
+h3{
+    margin: auto;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+
+  line-height: 1.4em;
+  font-size: 21px;
+  color: #d4b9fb;
+  margin-top: 15px;
+}
