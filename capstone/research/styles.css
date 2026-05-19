@@ -120,3 +120,13 @@ h3{
 .citation{
     margin-bottom: 30px;
 }
+
+ul li{
+    font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  color: #f6f4fd;
+  line-height: 1.4em;
+}

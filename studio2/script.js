@@ -208,8 +208,8 @@
         const html = document.querySelector('#displaydata');
         html.innerHTML = `
         <h2>Book ${data.books[10].book_number} - ${data.books[10].date}</h2>
-        <p>${data.books[10].title} By ${data.books[10].author}</p>
-        <p>${data.books[10].pages_read} pages</p>
+        <p>${data.books[10].title} By ${data.books[11].author}</p>
+        <p>Pages read: ${data.books[10].pages_read} pages</p>
         <p>${data.books[10].time_reading.value} ${data.books[10].time_reading.unit}</p>
         <p>Rating: ${data.books[10].enjoyment}/10</p>  
         <button class="closeBtn">Close</button>   
