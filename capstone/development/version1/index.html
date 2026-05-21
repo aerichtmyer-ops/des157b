@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone Vers 1</title>
+
+    <!-- Normalize CSS for browser compatability -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!-- Add link to any google fonts used here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- My Styles -->
+    <link href="styles.css" rel="stylesheet">
+
+    <!--AOS CSS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
+    <!-- Meta tag for mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- D3 -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://raw.githubusercontent.com/codeforamerica/click_that_hood/master/public/data/california-counties.geojson"></script>
+   
+    <!-- My script -->
+    <script src="script.js" defer></script>
+    </head>
+<body>
+
+        <header>
+        <h1>T I T L E</h1>
+        <h2>Subtitle</h2>
+        
+        <div class = "start">
+            <p class = "scroll">SCROLL DOWN</p>
+            <i class="fa-solid fa-angle-down"></i>
+        </div>
+    </header>
+    
+    <main>
+       
+            <div data-aos="fade-right" data-aos-duration="1500">
+                <div id = "q1container">
+                    <h3>Question 1</h3>
+                    <form>
+                        
+                        <label for ="answer1">
+                            <input type = "radio" id="answer1" name="question1" value="answer1">
+                            Answer 1
+                        </label><br>
+
+                        <label for ="answer2">
+                            <input type = "radio" id="answer2" name="question1" value="answer2">
+                            Answer 2
+                        </label><br>
+
+                        <label for ="answer3">
+                            <input type = "radio" id="answer3" name="question1" value="answer3">
+                            Answer 3
+                        </label><br>
+
+                        <label for ="answer4">
+                            <input type = "radio" id="answer4" name="question1" value="answer4">
+                            Answer 4</label><br>
+                        <input type = "submit" value = "SUBMIT">
+                    </form>
+                </div>
+            </div>
+
+            <div data-aos="fade-left" data-aos-duration="1500">
+                <div id = "q2container">
+                    <h3>Question 2</h3>
+                    <form>
+                        
+                        <label for ="answer1">
+                            <input type = "radio" id="answer1" name="question1" value="answer1">
+                            Answer 1
+                        </label><br>
+
+                        <label for ="answer2">
+                            <input type = "radio" id="answer2" name="question1" value="answer2">
+                            Answer 2
+                        </label><br>
+
+                        <label for ="answer3">
+                            <input type = "radio" id="answer3" name="question1" value="answer3">
+                            Answer 3
+                        </label><br>
+
+                        <label for ="answer4">
+                            <input type = "radio" id="answer4" name="question1" value="answer4">
+                            Answer 4</label><br>
+                        <input type = "submit" value = "SUBMIT">
+                    </form>
+                </div>
+            </div>
+
+            <div data-aos="fade-right" data-aos-duration="1500">
+                <div id = "q3container">
+                    <h3>Question 3</h3>
+                    <form>
+                        
+                        <label for ="answer1">
+                            <input type = "radio" id="answer1" name="question1" value="answer1">
+                            Answer 1
+                        </label><br>
+
+                        <label for ="answer2">
+                            <input type = "radio" id="answer2" name="question1" value="answer2">
+                            Answer 2
+                        </label><br>
+
+                        <label for ="answer3">
+                            <input type = "radio" id="answer3" name="question1" value="answer3">
+                            Answer 3
+                        </label><br>
+
+                        <label for ="answer4">
+                            <input type = "radio" id="answer4" name="question1" value="answer4">
+                            Answer 4</label><br>
+                        <input type = "submit" value = "SUBMIT">
+                    </form>
+                </div>
+            </div>
+
+            <div data-aos="fade-left" data-aos-duration="1500">
+                <div id = "q4container">
+                    <h3>Question 4</h3>
+                    <form>
+                        
+                        <label for ="answer1">
+                            <input type = "radio" id="answer1" name="question1" value="answer1">
+                            Answer 1
+                        </label><br>
+
+                        <label for ="answer2">
+                            <input type = "radio" id="answer2" name="question1" value="answer2">
+                            Answer 2
+                        </label><br>
+
+                        <label for ="answer3">
+                            <input type = "radio" id="answer3" name="question1" value="answer3">
+                            Answer 3
+                        </label><br>
+
+                        <label for ="answer4">
+                            <input type = "radio" id="answer4" name="question1" value="answer4">
+                            Answer 4</label><br>
+                        <input type = "submit" value = "SUBMIT">
+                    </form>
+                </div>
+            </div>
+
+            <div data-aos="fade-left" data-aos-duration="1500">
+                <div id = "q5container">
+                    <h3>Question 5</h3>
+                    <form>
+                        
+                        <label for ="answer1">
+                            <input type = "radio" id="answer1" name="question1" value="answer1">
+                            Answer 1
+                        </label><br>
+
+                        <label for ="answer2">
+                            <input type = "radio" id="answer2" name="question1" value="answer2">
+                            Answer 2
+                        </label><br>
+
+                        <label for ="answer3">
+                            <input type = "radio" id="answer3" name="question1" value="answer3">
+                            Answer 3
+                        </label><br>
+
+                        <label for ="answer4">
+                            <input type = "radio" id="answer4" name="question1" value="answer4">
+                            Answer 4</label><br>
+                        <input type = "submit" value = "SUBMIT">
+                    </form>
+                </div>
+            </div>
+
+    </main>
+</body>
+</html>
