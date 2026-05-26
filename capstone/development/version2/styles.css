@@ -179,9 +179,7 @@ header{
     background: conic-gradient(from var(--angle), #460096, #19cf44, #88ff00);
 
 
-    -webkit-mask: 
-      linear-gradient(#fff 0 0) padding-box,
-       linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box,linear-gradient(#fff 0 0);
 
     -webkit-mask-composite: destination-out;
       mask-composite:exclude;

@@ -30,6 +30,7 @@
     });
 
 
+    //chart
     //Q1 Data
     const data = [
         { group: "Human doctors", accuracy: 0.74 },
