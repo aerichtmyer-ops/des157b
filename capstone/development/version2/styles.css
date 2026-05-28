@@ -61,7 +61,7 @@ header{
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-style: normal;
-  font-size: 18px;
+  font-size: 22px;
   color:#fefffd;
   margin-bottom: 0px;
 }
@@ -284,7 +284,7 @@ label {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 21px;
+  font-size: 17px;
   color:#fcfefa;
   cursor: pointer;
   margin-left: 25px;
@@ -341,14 +341,37 @@ form{
     margin-top: 5px;
 }
 
-#q1{
+#q1, #q2, #q3, #q5{
   font-family: "Oxanium", sans-serif;
   font-weight: 300;
   font-style: normal;
   font-size: 26px;
   color: #6bfc43;
-  margin-left: 15px;
+  margin-left: 25px;
+  margin-right: 10px;
   margin-bottom: 35px;
+  line-height: 1.8em;
 }
 
+#q4{
+    font-family: "Oxanium", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 22px;
+  color: #6bfc43;
+  margin-left: 20px;
+  margin-right: 17px;
+  margin-bottom: 35px;
+  line-height: 1.8em;
+}
 
+#q1-answer-output, #q3-answer-output,#q4-answer-output,#q5-answer-output{
+    font-family: "Oxanium", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 26px;
+  color: #279709;
+
+  line-height: 1.8em;
+  text-align: center;
+}

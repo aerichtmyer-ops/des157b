@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capstone Vers 1</title>
+    <title>Capstone Vers 2</title>
 
     <!-- Normalize CSS for browser compatability -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
@@ -38,35 +38,63 @@
 <body>
 
         <header>
-        <h1>T I T L E</h1>
+        <h1>P R O G N O S I S</h1>
         <h2>Subtitle</h2>
         
         <div class = "start">
-            <p class = "scroll">SCROLL DOWN</p>
+            <p class = "scroll">BEGIN</p>
             <i class="fa-solid fa-angle-down"></i>
         </div>
     </header>
     
     <main>
-       
+
             <div data-aos="fade-right" data-aos-duration="1500">
                 <div id = "q1container">
                     <h3>Question 1</h3>
-                    <h2 id = "q1">Which group currently performs best in complex medical diagnoses?</h2>
+                    <h2 id = "q1">As a patient, what type of diagnosis would make you feel the most confident?</h2>
                     <form id = "q1form">
                         
-                        <label for ="answer1">
-                            <input type = "radio" id="answer1" name="question1" value="answer1">
+                       
+                        <label>
+                             <input type = "radio" name="q1" value="medicalProfessional">
+                            A diagnosis made by a licensed medical professional 
+                        </label><br>
+
+                        <label>
+                            <input type = "radio" name="q1" value="medicalProfessionalAI">
+                            A diagnosis made licensed medical professional assisted by AI
+                        </label><br>
+
+                        <label>
+                            <input type = "radio" name="q1" value="AI">
+                            A diagnosis made only by an AI model trained on medical databases
+                        </label><br>
+                        <input type = "submit" value = "SUBMIT">
+
+                    </form>
+                    <div id = "q1-answer-output"></div>
+                </div>
+            </div>
+
+            <div data-aos="fade-right" data-aos-duration="1500">
+                <div id = "q2container">
+                    <h3>Question 2</h3>
+                    <h2 id = "q2">Which group currently performs best in complex medical diagnoses?</h2>
+                    <form id = "q2form">
+                        
+                        <label>
+                            <input type = "radio" name="q2" value="Human doctors">
                             Human doctors alone
                         </label><br>
 
-                        <label for ="answer2">
-                            <input type = "radio" id="answer2" name="question1" value="answer2">
+                        <label>
+                            <input type = "radio"  name="q2" value="answer2">
                             AI alone
                         </label><br>
 
-                        <label for ="answer3">
-                            <input type = "radio" id="answer3" name="question1" value="answer3">
+                        <label>
+                            <input type = "radio" name="q2" value="answer3">
                             Doctors using AI assistance
                         </label><br>
                         <input type = "submit" value = "SUBMIT">
@@ -77,117 +105,97 @@
             </div>
 
             <div data-aos="fade-left" data-aos-duration="1500">
-                <div id = "q2container">
-                    <h3>Question 2</h3>
-                    <form>
+                <div id = "q3container">
+                    <h3>Question 3</h3>
+                     <h2 id = "q3">AI will increase access to healthcare in rural areas</h2>
+                    <form id = "q3form">
                         
-                        <label for ="answer1">
-                            <input type = "radio" id="answer1" name="question1" value="answer1">
-                            Answer 1
+                        <label>
+                            <input type = "radio" name="q31" value="answer1">
+                            Agree
                         </label><br>
 
-                        <label for ="answer2">
-                            <input type = "radio" id="answer2" name="question1" value="answer2">
-                            Answer 2
+                        <label>
+                            <input type = "radio"  name="q3" value="answer2">
+                            Disagree
                         </label><br>
 
-                        <label for ="answer3">
-                            <input type = "radio" id="answer3" name="question1" value="answer3">
-                            Answer 3
+                        <label>
+                            <input type = "radio" name="q3" value="answer3">
+                            Neutral
                         </label><br>
 
-                        <label for ="answer4">
-                            <input type = "radio" id="answer4" name="question1" value="answer4">
-                            Answer 4</label><br>
                         <input type = "submit" value = "SUBMIT">
                     </form>
+
+                        <!-- <div id="treechart"></div> -->
+                         <div id = "q3-answer-output"></div>
                 </div>
             </div>
 
             <div data-aos="fade-right" data-aos-duration="1500">
                 <div id = "q3container">
-                    <h3>Question 3</h3>
-                    <form>
+                    <h3>Question 4</h3>
+                    <h2 id = "q4">Currently, there are less than 10 FDA approved AI-enabled medical devices assisting in real-time patient data.</h2>
+                    <form id = "q4form">
                         
-                        <label for ="answer1">
-                            <input type = "radio" id="answer1" name="question1" value="answer1">
-                            Answer 1
+                        <label>
+                            <input type = "radio" name="q4" value="answer1">
+                            True
                         </label><br>
 
-                        <label for ="answer2">
-                            <input type = "radio" id="answer2" name="question1" value="answer2">
-                            Answer 2
+                        <label>
+                            <input type = "radio" name="q4" value="answer2">
+                            False - There's more
                         </label><br>
 
-                        <label for ="answer3">
-                            <input type = "radio" id="answer3" name="question1" value="answer3">
-                            Answer 3
+                        <label>
+                            <input type = "radio" name="q4" value="answer3">
+                            Not Sure
                         </label><br>
 
-                        <label for ="answer4">
-                            <input type = "radio" id="answer4" name="question1" value="answer4">
-                            Answer 4</label><br>
                         <input type = "submit" value = "SUBMIT">
                     </form>
+                    <div id = "q4-answer-output"></div>
                 </div>
             </div>
 
             <div data-aos="fade-left" data-aos-duration="1500">
                 <div id = "q4container">
-                    <h3>Question 4</h3>
-                    <form>
-                        
-                        <label for ="answer1">
-                            <input type = "radio" id="answer1" name="question1" value="answer1">
-                            Answer 1
-                        </label><br>
-
-                        <label for ="answer2">
-                            <input type = "radio" id="answer2" name="question1" value="answer2">
-                            Answer 2
-                        </label><br>
-
-                        <label for ="answer3">
-                            <input type = "radio" id="answer3" name="question1" value="answer3">
-                            Answer 3
-                        </label><br>
-
-                        <label for ="answer4">
-                            <input type = "radio" id="answer4" name="question1" value="answer4">
-                            Answer 4</label><br>
-                        <input type = "submit" value = "SUBMIT">
-                    </form>
-                </div>
-            </div>
-
-            <div data-aos="fade-left" data-aos-duration="1500">
-                <div id = "q5container">
                     <h3>Question 5</h3>
+                    <h2 id = "q5">Does the use of AI in medicine and medicine research pose risks to patient privacy?</h2>
+                    <form id = "q5form">
                     <form>
                         
-                        <label for ="answer1">
-                            <input type = "radio" id="answer1" name="question1" value="answer1">
-                            Answer 1
+                        <label>
+                            <input type = "radio" name="q5" value="answer1">
+                            Yes
                         </label><br>
 
-                        <label for ="answer2">
-                            <input type = "radio" id="answer2" name="question1" value="answer2">
-                            Answer 2
+                        <label>
+                            <input type = "radio" name="q5" value="answer2">
+                            Maybe
                         </label><br>
 
-                        <label for ="answer3">
-                            <input type = "radio" id="answer3" name="question1" value="answer3">
-                            Answer 3
+                        <label>
+                            <input type = "radio" name="q5" value="answer3">
+                            No
                         </label><br>
 
-                        <label for ="answer4">
-                            <input type = "radio" id="answer4" name="question1" value="answer4">
-                            Answer 4</label><br>
+                        <label>
+                            <input type = "radio" name="q5" value="answer4">
+                            Not Sure
+                        </label><br>
+
                         <input type = "submit" value = "SUBMIT">
+
                     </form>
+
+                    <div id = "q5-answer-output"></div>
                 </div>
             </div>
 
+            
     </main>
 </body>
 </html>
