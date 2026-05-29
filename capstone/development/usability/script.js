@@ -41,8 +41,8 @@
     })
 
     //Back4APP
-    // Parse.initialize("WTc91DlFAdHqyxrm72vH2aPUEmQbSzVUgoUbZOmG", "OBlMr84PwI7pUnqtHwCuHLVZanCM6rC3KCBasYNp"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
-    // Parse.serverURL = "https://parseapi.back4app.com/";
+    Parse.initialize("yPmh2qhUEnGNFKQrZWHhyT86lSKvBZrQK2gbQb5P", "9Z3MTctaS2P9GSH4QaO77QKIUkZRtuJovpjqZp42"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
+    Parse.serverURL = "https://parseapi.back4app.com/";
 
 
     //form functions
@@ -84,6 +84,8 @@
         event.preventDefault();
         
         form2.className = "hidden";
+
+        document.querySelector("#q2container").style.minWidth = "600px";
 
         drawChart();
     })
@@ -405,5 +407,33 @@
             
     })
 
-    getData();
+    // getData();
+
+    //collect user input from submitted questions
+
+    var hiddenInput = document.querySelectorAll( ".hiddeninput" );
+    const forms = document.querySelectorAll("form");
+
+    forms.forEach(function(form){
+        form.addEventListener('submit', function(event){
+            for(var i =0; i< hiddenInput.length; i++ ){
+                hiddenInput[i];
+            }
+            collectInput();
+        });
+
+        console.log({form});
+    });
+
+    //function for back4app
+    async function collectInput(){
+        const question1 = {}
+
+        // for(let i = 0; i < hiddenInput.length; i++){
+        //     // let key = document.querySelector('#form1').getAttribute();
+        //     let value = hiddenInput[i].value;
+        //     question1[key] = value.
+        // }
+    }
+    
 })();

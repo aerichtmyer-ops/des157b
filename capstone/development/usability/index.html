@@ -68,20 +68,22 @@
                         
                        
                         <label>
-                             <input type = "radio" name="q1" value="medicalProfessional">
+                             <input type = "radio" name="q1" value="answer1a">
                             A diagnosis made by a licensed medical professional 
                         </label><br>
 
                         <label>
-                            <input type = "radio" name="q1" value="medicalProfessionalAI">
+                            <input type = "radio" name="q1" value="answer1b">
                             A diagnosis made licensed medical professional assisted by AI
                         </label><br>
 
                         <label>
-                            <input type = "radio" name="q1" value="AI">
+                            <input type = "radio" name="q1" value="answer1c">
                             A diagnosis made only by an AI model trained on medical databases
                         </label><br>
+                        <input type = "hidden" value = "q1" class = "hiddeninput">
                         <input type = "submit" value = "SUBMIT">
+
 
                     </form>
                     <div id = "q1-answer-output"></div>
@@ -100,14 +102,16 @@
                         </label><br>
 
                         <label>
-                            <input type = "radio"  name="q2" value="answer2">
+                            <input type = "radio"  name="q2" value="AIalone">
                             AI alone
                         </label><br>
 
                         <label>
-                            <input type = "radio" name="q2" value="answer3">
+                            <input type = "radio" name="q2" value="DoctorsusingAI">
                             Doctors using AI assistance
                         </label><br>
+                        
+                        <input type = "hidden" value = "q2" class = "hiddeninput">
                         <input type = "submit" value = "SUBMIT">
 
                     </form>
@@ -136,6 +140,7 @@
                             Neutral
                         </label><br>
 
+                        <input type = "hidden" value = "q3" class = "hiddeninput">
                         <input type = "submit" value = "SUBMIT">
                     </form>
 
@@ -165,6 +170,7 @@
                             Not Sure
                         </label><br>
 
+                         <input type = "hidden" value = "q4" class = "hiddeninput">
                         <input type = "submit" value = "SUBMIT">
                     </form>
                     <div id = "q4-answer-output"></div>
@@ -198,6 +204,7 @@
                             Not Sure
                         </label><br>
 
+                        <input type = "hidden" value = "q5" class = "hiddeninput">
                         <input type = "submit" value = "SUBMIT">
 
                     </form>
@@ -205,8 +212,9 @@
                     <div id = "q5-answer-output"></div>
                 </div>
             </div>
-
-            
     </main>
+    
+    <!-- This is the minified production version of Parse JS -->
+    <script type="text/javascript" src="https://unpkg.com/parse/dist/parse.min.js"></script>
 </body>
 </html>

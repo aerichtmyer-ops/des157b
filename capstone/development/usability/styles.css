@@ -105,10 +105,10 @@ header{
 
     background: rgba(6, 6, 6, 0.85); 
     
-    
     padding: 15px;
     margin: 300px;
     border-radius: 10px;
+
     position: relative;
     z-index: 1;
 }
@@ -380,6 +380,10 @@ form{
   text-align: center;
 }
 
+#chart{
+  display: flex;
+  justify-content: center;
+}
 #overlay{
   position: absolute;
   background-color: #083301;
