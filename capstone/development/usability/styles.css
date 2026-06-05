@@ -386,7 +386,7 @@ form{
 }
 #overlay{
   position: absolute;
-  background-color: #083301;
+  background-color: #041d00;
   top: 0;
   left: 0;
   width: 100vw;
@@ -403,15 +403,12 @@ form{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
 }
 
 .close{
   position: absolute;
-  top:70%;
+  top:60%;
   left: 48%;
-
-
 }
 
 .section{

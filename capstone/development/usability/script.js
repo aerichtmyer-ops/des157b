@@ -212,201 +212,59 @@
             if (output3){
                 output3.innerHTML = "<p>Displayment of a world map with current locations/regions implemennting AI in rural areas</p><p>Points/labels will detail current specfic uses</p>";
             }
-            
-            
         
-        // treeChart();
+        DrawMap();
     })
 
-    //draw tree function
-    function treeChart(){
+  /*  function DrawMap(){
 
-        //specify chart dimensions
-        const width = 900;
-        const height = 300;
+        canvas = {
+            // Specify the chart’s dimensions.
+            const height = Math.min(width, 720); // Observable sets a responsive *width*
 
-        const marginTop = 30;
-        const marginRight = 20;
-        const marginBottom = 80;
-        const marginLeft = 60;
+            // Prepare a canvas.
+            const dpr = window.devicePixelRatio ?? 1;
+            const canvas = d3.create("canvas")
+                .attr("width", dpr * width)
+                .attr("height", dpr * height)
+                .style("width", `${width}px`);
+            const context = canvas.node().getContext("2d");
+            context.scale(dpr, dpr);
 
-        //rows are seperated by dx pixels, columns by dy pixels, names can be counter intuitive
-        // dx is height and dy is width
-        //bottom in the data domain. the width of a column is based on the tree's height
-        console.log(q3Data);
-        const root = d3.hierarchy(q3Data);
-        const dx = 30;
-        const dy = (width - marginRight - marginLeft) / (1 + root.height);
+            // Create a projection and a path generator.
+            const projection = d3.geoOrthographic().fitExtent([[10, 10], [width - 10, height - 10]], {type: "Sphere"});
+            const path = d3.geoPath(projection, context);
+            const tilt = 20;
 
-        //define tree layout and shape for links
-        const tree = d3.tree().nodeSize([dx, dy]);
-        const diagonal = d3.linkHorizontal().x(d => d.y).y(d => d.x);
-
-        //create SVG container, a layer for the links and a layer for the nodes
-        d3.select("#treechart").html("")
-       
-        const svg = d3.select("#treechart")
-        .append("svg")
-        .attr("width", width)
-        .attr("height", height)
-        .attr("viewBox", [-marginLeft, -marginTop, width, height])
-        .attr("style", "max-width: 100%; height: auto; font: 10px Roboto sans-serif; user-select: none;");
-
-        const gLink = svg.append("g")
-        .attr("fill", "none")
-        .attr("stroke", "#fffcfcff")
-        .attr("stroke-opacity", 0.4)
-        .attr("stroke-width", 1.5);
-
-        const gNode = svg.append("g")
-        .attr("cursor", "pointer")
-        .attr("pointer-events", "all");
-
-        function update(event, source){
-            const duration = event?.altKey ? 2500 : 250; //hold down alt key to slow down transition
-            
-            //compute layout first
-            tree(root);
-
-            //then get positioned nodes/links
-            const nodes = root.descendants().reverse();
-            const links = root.links();
-
-            let left = root;
-            let right = root;
-            root.eachBefore(node => {
-                if(node.x < left.x) left = node;
-                if(node.x > right.x) right = node;
-            });
-
-            const treeheight = right.x - left.x + marginTop + marginBottom;
-
-            const transition = svg.transition()
-            .duration(duration)
-            .attr("height", treeheight)
-            .attr("viewBox", [-marginLeft, left.x - marginTop, width, treeheight])
-            .tween("resize", window.ResizeObserver ? null : () => () => svg.dispatch("toggle"));
-
-            //update the nodes
-            const node = gNode.selectAll("g")
-            .data(nodes, d => d.id);
-
-            //enter new nodes at the parent's previous position
-            const nodeEnter = node.enter().append("g")
-                .attr("transform", d => `translate(${source.y0},${source.x0})`)
-                .attr("fill-opacity", 0)
-                .attr("stroke-opacity", 0)
-                .on("click", (event, d) => {
-                d.children = d.children ? null : d._children;
-                update(event, d);
-            });
-
-            nodeEnter.append("circle")
-                .attr("r", 2.5)
-                .attr("fill", d => d._children ? "#555" : "#999")
-                .attr("stroke-width", 10);
-
-            nodeEnter.append("text")
-                .attr("dy", "0.31em")
-                .attr("x", d => d._children ? -6 : 6)
-                .attr("text-anchor", d => d._children ? "end" : "start")
-                .text(d => d.data.value ? `${d.data.name}: ${d.data.value}` : d.data.name)
-                .attr("stroke-linejoin", "round")
-                .attr("stroke-width", 3)
-                .attr("stroke", "white")
-                .attr("paint-order", "stroke");
-
-            // Transition nodes to their new position.
-            const nodeUpdate = node.merge(nodeEnter).transition(transition)
-                .attr("transform", d => `translate(${d.y},${d.x})`)
-                .attr("fill-opacity", 1)
-                .attr("stroke-opacity", 1);
-
-            // Transition exiting nodes to the parent's new position.
-            const nodeExit = node.exit().transition(transition).remove()
-                .attr("transform", d => `translate(${source.y},${source.x})`)
-                .attr("fill-opacity", 0)
-                .attr("stroke-opacity", 0);
-
-            // Update the links…
-            const link = gLink.selectAll("path")
-            .data(links, d => d.target.id);
-
-            // Enter any new links at the parent's previous position.
-            const linkEnter = link.enter().append("path")
-                .attr("d", d => {
-                const o = {x: source.x0, y: source.y0};
-                return diagonal({source: o, target: o});
-                });
-
-            // Transition links to their new position.
-            link.merge(linkEnter).transition(transition)
-                .attr("d", diagonal);
-
-            // Transition exiting nodes to the parent's new position.
-            link.exit().transition(transition).remove()
-                .attr("d", d => {
-                const o = {x: source.x, y: source.y};
-                return diagonal({source: o, target: o});
-                });
-
-            // Stash the old positions for transition.
-            root.eachBefore(d => {
-            d.x0 = d.x;
-            d.y0 = d.y;
-            });
+            function render(country, arc) {
+                context.clearRect(0, 0, width, height);
+                context.beginPath(), path(land), context.fillStyle = "#ccc", context.fill();
+                context.beginPath(), path(country), context.fillStyle = "#f00", context.fill();
+                context.beginPath(), path(borders), context.strokeStyle = "#fff", context.lineWidth = 0.5, context.stroke();
+                context.beginPath(), path({type: "Sphere"}), context.strokeStyle = "#000", context.lineWidth = 1.5, context.stroke();
+                context.beginPath(), path(arc), context.stroke();
+                return context.canvas;
+            }
         }
 
-        // Do the first update to the initial configuration of the tree — where a number of nodes
-        // are open (arbitrarily selected as the root, plus nodes with 7 letters).
-        root.x0 = dy / 2;
-        root.y0 = 0;
-        /*root.descendants().forEach((d, i) => {
-            d.id = i;
-            d._children = d.children;
-            if (d.depth && d.data.name.length !== 7) d.children = null;
-        });*/
-        root.descendants().forEach((d, i) => {
-            d.id = i;
-            d._children = d.children;
-        });
+*/
 
-        update(null, root);
 
-    }
 
-    //Q4 Form
-    const form4 = document.querySelector('#q4form');
 
-    form4.addEventListener('submit', function(event){
-        event.preventDefault();
-        
 
-        form4.className = "hidden";
 
-        const output4 = document.querySelector('#q4-answer-output');
-            if (output4){
-                output4.innerHTML = "<p>Displayment of a line graph that shows the boom of AI medical devices.</p><p>From one in 1995, 6 in 2015, and to 223 by 2023.</p>";
-            }
-            
-    })
 
-    //Q5 Form
-    const form5 = document.querySelector('#q5form');
 
-    form5.addEventListener('submit', function(event){
-        event.preventDefault();
-        
 
-        form5.className = "hidden";
 
-        const output5 = document.querySelector('#q5-answer-output');
-            if (output5){
-                output5.innerHTML = "<p>Displayment of a graph that shows the overlap of synthetic and real datasets used to train AI mdodels. Synthetic datasets are proven to be just as reliable, minimizing privacy breaches.</p>";
-            }
-            
-    })
 
+
+
+
+    
+
+   
     // getData();
 
     //collect user input from submitted questions
@@ -435,5 +293,5 @@
         //     question1[key] = value.
         // }
     }
-    
+
 })();
