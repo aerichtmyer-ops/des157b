@@ -629,7 +629,7 @@ strong{
 #results {
     /* backdrop-filter: blur(10px); */
   margin: 15px auto 0 auto;
-    padding-top: 180px;
+    padding-top: 150px;
     min-width: 600px;
     max-width: 820px;
     position: relative;
