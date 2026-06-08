@@ -683,7 +683,7 @@ strong{
   padding-right: 16px;
   padding-top: 12px;
   margin: 15px auto 0 auto;
-  margin-bottom: 350px;
+  margin-bottom: 150px;
   box-shadow: 6px 6px 4px rgba(0, 14, 2, 0.71);
 }
 
@@ -692,4 +692,27 @@ strong{
   background-color: #2d0668;
   transform: scaleX(1.5);
   transition: 2s;
+}
+
+footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  background-color:#28035f;;
+  min-height: 35px;
+}
+
+footer a{
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 16px;
+  color:#ebfce6;
+  text-decoration: none;
+}
+
+footer a:hover{
+  text-decoration: underline;
 }
