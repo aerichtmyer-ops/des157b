@@ -61,7 +61,6 @@
                 output.innerHTML = "<p>Your answer has been logged</p>";
             }
         
-            console.log('you are dummy dumb');
         })
 
     }
@@ -249,6 +248,40 @@
 
 */
 
+     //Q4 Form
+    const form4 = document.querySelector('#q4form');
+
+    form4.addEventListener('submit', function(event){
+        event.preventDefault();
+        
+
+        form4.className = "hidden";
+
+        // const output4 = document.querySelector('#q4-answer-output');
+        //     if (output4){
+        //         output4.innerHTML = "<p>Displayment of a line graph that shows the boom of AI medical devices.</p><p>From one in 1995, 6 in 2015, and to 223 by 2023.</p>";
+        //     }
+        lineChart();
+
+         document.querySelector("#q4-answer-output").innerHTML += 'The FDA authorized its first AI-enabled medical device in 1995. By 2015, only six such devices had been approved, but the number spiked to 223 by 2023.';
+    })
+
+
+    //Q5 Form
+    const form5 = document.querySelector('#q5form');
+
+    form5.addEventListener('submit', function(event){
+        event.preventDefault();
+        
+
+        form5.className = "hidden";
+
+        const output5 = document.querySelector('#q5-answer-output');
+            if (output5){
+                output5.innerHTML = "<p>Displayment of a graph that shows the overlap of synthetic and real datasets used to train AI mdodels. Synthetic datasets are proven to be just as reliable, minimizing privacy breaches.</p>";
+            }
+            
+    })
 
 
 

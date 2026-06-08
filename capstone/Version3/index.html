@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone Vers 2</title>
+
+    <!-- Normalize CSS for browser compatability -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!-- Add link to any google fonts used here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- My Styles -->
+    <link href="styles.css" rel="stylesheet">
+
+    <!--AOS CSS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
+    <!-- Meta tag for mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- D3 -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
+   
+   
+    <!-- My script -->
+    <script src="script.js" defer></script>
+    </head>
+<body>
+    <button class = "music"><i class="fa-solid fa-music fa-sm"></i></button>
+
+        <header>
+        <h1>P R O G N O S I S</h1>
+        <h2>An exploration of the current and potential imapct of AI in healthcare</h2>
+        
+        <div class = "start">
+            <p class = "scroll">BEGIN</p>
+            <i class="fa-solid fa-angle-down"></i>
+        </div>
+    </header>
+    
+    <main>
+
+            <div data-aos="fade-right" data-aos-duration="1500">
+                <div id = "q1container">
+                    <h3>Question 1</h3>
+                    <h2 id = "q1">As a patient, what type of diagnosis would make you feel the most confident?</h2>
+                    <form id = "q1form">
+                        
+                       
+                        <label>
+                             <input type = "radio" name="q1" value="answer1a">
+                            A diagnosis made by a licensed medical professional 
+                        </label><br>
+
+                        <label>
+                            <input type = "radio" name="q1" value="answer1b">
+                            A diagnosis made licensed medical professional assisted by AI
+                        </label><br>
+
+                        <label>
+                            <input type = "radio" name="q1" value="answer1c">
+                            A diagnosis made only by an AI model trained on medical databases
+                        </label><br>
+                        <input type = "hidden" value = "q1" class = "hiddeninput">
+                        <input type = "submit" value = "SUBMIT">
+
+
+                    </form>
+                    <div id = "q1-answer-output"></div>
+                </div>
+            </div>
+
+            <div data-aos="fade-right" data-aos-duration="1500">
+                <div id = "q2container">
+                    <h3>Question 2</h3>
+                    <h2 id = "q2">Which group currently performs best in complex medical diagnoses?</h2>
+                    <form id = "q2form">
+                        
+                        <label>
+                            <input type = "radio" name="q2" value="answer2a">
+                            Human Doctors
+                        </label><br>
+
+                        <label>
+                            <input type = "radio"  name="q2" value="answer2b">
+                            AI alone
+                        </label><br>
+
+                        <label>
+                            <input type = "radio" name="q2" value="answer2c">
+                            Doctors using AI assistance
+                        </label><br>
+                        
+                        <input type = "hidden" value = "q2" class = "hiddeninput">
+                        <input type = "submit" value = "SUBMIT">
+
+                    </form>
+                    <div id = "chart"></div>
+                     <h4 id = "title2"></h4>
+                </div>
+            </div>
+
+            <div data-aos="fade-left" data-aos-duration="1500">
+                <div id = "q3container">
+                    <h3>Question 3</h3>
+                     <h2 id = "q3">AI will increase access to healthcare in rural areas</h2>
+                    <form id = "q3form">
+                        
+                        <label>
+                            <input type = "radio" name="q31" value="answer3a">
+                            Agree
+                        </label><br>
+
+                        <label>
+                            <input type = "radio"  name="q3" value="answer3b">
+                            Disagree
+                        </label><br>
+
+                        <label>
+                            <input type = "radio" name="q3" value="answer3c">
+                            Neutral
+                        </label><br>
+
+                        <input type = "hidden" value = "q3" class = "hiddeninput">
+                        <input type = "submit" value = "SUBMIT">
+                    </form>
+
+                        <!-- <div id="treechart"></div> -->
+                        <div id="map"></div>
+                        <div id = "box3">
+                            <h4 id = "title"></h4>
+                            <p id = "countryDescription"></p>
+                        </div>
+                        
+                </div>
+            </div>
+
+            <div data-aos="fade-right" data-aos-duration="1500">
+                <div id = "q3container">
+                    <h3>Question 4</h3>
+                    <h2 id = "q4">Currently, there are less than 10 FDA approved AI-enabled medical devices assisting in real-time patient data.</h2>
+                    <form id = "q4form">
+                        
+                        <label>
+                            <input type = "radio" name="q4" value="answer4a">
+                            True
+                        </label><br>
+
+                        <label>
+                            <input type = "radio" name="q4" value="answer4b">
+                            False - There's more
+                        </label><br>
+
+                        <label>
+                            <input type = "radio" name="q4" value="answer4c">
+                            Not Sure
+                        </label><br>
+
+                         <input type = "hidden" value = "q4" class = "hiddeninput">
+                        <input type = "submit" value = "SUBMIT">
+                    </form>
+
+                    <div id="lineChart"></div>
+                    <h4 id = "title4"></h4>
+                </div>
+            </div>
+
+            <div data-aos="fade-left" data-aos-duration="1500">
+                <div id = "q4container">
+                    <h3>Question 5</h3>
+                    <h2 id = "q5">Understanding protein structures could lead to faster treatments. Since 2021, how much do you think the largest protein database has grown through the help of AI? </h2>
+    
+                    <form id = "q5form">
+                    <form>
+                        
+                        <label>
+                            <input type = "radio" name="q5" value="answer5a">
+                            Less than 50%
+                        </label><br>
+
+                        <label>
+                            <input type = "radio" name="q5" value="answer5b">
+                            50 - 100%
+                        </label><br>
+
+                        <label>
+                            <input type = "radio" name="q5" value="answer5c">
+                            100 - 250%
+                        </label><br>
+
+                        <label>
+                            <input type = "radio" name="q5" value="answer5d">
+                            More than 500%
+                        </label><br>
+
+                        <input type = "hidden" value = "q5" class = "hiddeninput">
+                        <input type = "submit" value = "SUBMIT">
+
+                    </form>
+
+                    <div id="barChartrace"></div>
+                    <h4 id = "title5"></h4>
+                </div>
+            </div>
+
+            <div data-aos="fade-right" data-aos-duration="1500">
+                <div id = "q6container">
+                    <h3>Question 6</h3>
+                    <h2 id = "q6">Has this experience changed your perception on AI and its potential impact on healthcare and humanity?</h2>
+                    <form id = "q6form">
+                        
+                        <label>
+                             <input type = "radio" name="q6" value="answer6a">
+                            Yes, I am more optimistic about AI
+                        </label><br>
+
+                        <label>
+                            <input type = "radio" name="q6" value="answer6b">
+                            yes, I am more concerned about AI
+                        </label><br>
+
+                        <label>
+                            <input type = "radio" name="q6" value="answer6c">
+                            No, my view has not changed
+                        </label><br>
+
+                        <label>
+                            <input type = "radio" name="q6" value="answer6d">
+                            I'm still unsure
+                        </label><br>
+
+                        <input type = "hidden" value = "q6" class = "hiddeninput">
+                        <input type = "submit" value = "SUBMIT">
+                    </form>
+                    <div id = "q6-answer-output"></div>
+                </div>
+            </div>
+
+            <div data-aos="fade-up" data-aos-duration="3000">
+                <div id = "results"><h4></h4></div>
+            </div>
+
+            <div data-aos="fade-up" data-aos-duration="3000">
+                <div id = "results2"><h4></h4></div>
+            </div>
+
+            <div id = "restart"></div>
+
+    </main>
+    
+    <!-- This is the minified production version of Parse JS -->
+    <script type="text/javascript" src="https://unpkg.com/parse/dist/parse.min.js"></script>
+</body>
+</html>

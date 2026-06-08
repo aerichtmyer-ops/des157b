@@ -1,0 +1,44 @@
+{
+  "name": "AI in Rural Healthcare",
+  "children": [
+    {
+      "name": "Problem",
+      "children": [
+        {
+          "name": "Large Rural Population",
+          "value": "3.4B globally / ~60M US residents"
+        }
+      ]
+    },
+    {
+      "name": "Gap",
+      "children": [
+        {
+          "name": "Workforce Shortage",
+          "value": "48,000 primary care physician shortage projected (US)"
+        },
+        {
+          "name": "Infrastructure Barriers",
+          "value": "22% of rural Americans lack reliable broadband"
+        },
+        {
+          "name": "Access Inequality",
+          "value": "Rural patients travel 59% more distance for care"
+        }
+      ]
+    },
+    {
+      "name": "Opportunity",
+      "children": [
+        {
+          "name": "AI Adoption Gap",
+          "value": "8% rural hospitals vs 65% overall hospitals using AI"
+        },
+        {
+          "name": "AI Potential",
+          "value": "Telehealth + diagnostic AI can reduce access barriers"
+        }
+      ]
+    }
+  ]
+}
