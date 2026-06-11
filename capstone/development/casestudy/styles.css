@@ -1,0 +1,8 @@
+body{
+    background-size:cover;
+    min-height: 100vh;
+    margin: auto 0;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
